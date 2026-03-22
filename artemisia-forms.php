@@ -52,8 +52,14 @@ function run_artemisia_forms() {
     } );
 
     // Register Admin Dashboard Menu
-    $admin_menu = new \ByteHawks\ArtemisiaForms\Admin\AdminMenu();
-    $admin_menu->init();
+    if ( is_admin() ) {
+        $admin_menu = new \ByteHawks\ArtemisiaForms\Admin\AdminMenu();
+        $admin_menu->init();
+    }
+
+    // Register Frontend Shortcode
+    $shortcode = new \ByteHawks\ArtemisiaForms\Frontend\Shortcode();
+    $shortcode->init();
 }
 add_action( 'plugins_loaded', 'run_artemisia_forms' );
 
