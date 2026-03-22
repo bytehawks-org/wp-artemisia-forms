@@ -1,0 +1,18 @@
+{
+    "name": "bytehawks/artemisia-forms",
+    "description": "A robust, high-performance, OOP-based WordPress form builder plugin.",
+    "type": "wordpress-plugin",
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ByteHawks\\ArtemisiaForms\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ByteHawks"
+        }
+    ]
+}

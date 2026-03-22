@@ -1,0 +1,128 @@
+.artemisia-forms-dashboard {
+    padding: 20px;
+    max-width: 1200px;
+    
+    .artemisia-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+    
+    .artemisia-empty-state {
+        background: #fff;
+        border: 1px dashed #ccc;
+        padding: 40px;
+        text-align: center;
+        border-radius: 4px;
+        color: #666;
+    }
+}
+
+// Form Builder Styles
+.artemisia-builder-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px); /* Fill screen minus WP admin bar */
+    background: #f0f0f1;
+    margin: -10px -20px -20px -20px; /* Offset WP wrap padding */
+
+    .builder-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ccd0d4;
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            h2 { margin: 0; font-size: 20px; }
+        }
+    }
+
+    .builder-workspace {
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+
+        /* Left Sidebar: Field Types */
+        .builder-sidebar-left {
+            width: 250px;
+            background: #fff;
+            border-right: 1px solid #ccd0d4;
+            padding: 20px;
+            overflow-y: auto;
+
+            .field-types-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+                button {
+                    width: 100%;
+                    text-align: left;
+                    padding: 8px 12px;
+                }
+            }
+        }
+
+        /* Central Canvas */
+        .builder-canvas {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+
+            .canvas-dropzone {
+                background: #fff;
+                border: 2px dashed #ccd0d4;
+                flex: 1;
+                border-radius: 4px;
+                padding: 20px;
+                min-height: 400px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .empty-canvas-message {
+                    text-align: center;
+                    color: #8c8f94;
+                    margin: auto;
+                }
+
+                .canvas-field-item {
+                    background: #f6f7f7;
+                    border: 1px solid #ccd0d4;
+                    padding: 15px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    
+                    &:hover { border-color: #2271b1; }
+                }
+            }
+        }
+
+        /* Right Sidebar: Settings */
+        .builder-sidebar-right {
+            width: 300px;
+            background: #fff;
+            border-left: 1px solid #ccd0d4;
+            padding: 20px;
+            overflow-y: auto;
+            
+            .help-text { color: #646970; font-style: italic; }
+        }
+    }
+}
+
